@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
+    <sys_ux_screen action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <app_config display_value="College Event Registration Portal App Config">7a5c6697236a4390b69b0be670d03877</app_config>
+        <description/>
+        <disable_auto_reflow>true</disable_auto_reflow>
+        <disable_interoperable>false</disable_interoperable>
+        <event_mappings>[
+    {
+        "eventMappingId": "kAggggzvhhhhAEmWjjusPXJKOEjjfN",
+        "isConfiguration": null,
+        "offRowStorageId": null,
+        "sourceEventApiName": "x_2065908_colleg_0.NAV_ITEM_SELECTED_RELAY_0a024504c33e8790c481f6edd401313e",
+        "sourceEventCorrelationId": null,
+        "sourceEventDefinition": {
+            "apiName": "x_2065908_colleg_0.NAV_ITEM_SELECTED_RELAY_0a024504c33e8790c481f6edd401313e",
+            "id": null,
+            "type": "UXEVENT"
+        },
+        "sourceEventSysId": null,
+        "targets": [
+            {
+                "broker": null,
+                "clientScript": null,
+                "clientTransformScript": null,
+                "clientTransformScriptUxValue": null,
+                "conditional": null,
+                "declarativeAction": null,
+                "event": {
+                    "apiName": "sn_canvas_core.NAV_ITEM_SELECTED",
+                    "payload": {
+                        "container": {
+                            "external": {
+                                "binding": {
+                                    "address": [
+                                        "external"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "fields": {
+                                "binding": {
+                                    "address": [
+                                        "fields"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "multiInstField": {
+                                "binding": {
+                                    "address": [
+                                        "multiInstField"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "navigationOptions": {
+                                "binding": {
+                                    "address": [
+                                        "navigationOptions"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "params": {
+                                "binding": {
+                                    "address": [
+                                        "params"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "passiveNavigation": {
+                                "binding": {
+                                    "address": [
+                                        "passiveNavigation"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "redirect": {
+                                "binding": {
+                                    "address": [
+                                        "redirect"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "route": {
+                                "binding": {
+                                    "address": [
+                                        "route"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "targetRoute": {
+                                "binding": {
+                                    "address": [
+                                        "targetRoute"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            },
+                            "title": {
+                                "binding": {
+                                    "address": [
+                                        "title"
+                                    ]
+                                },
+                                "type": "EVENT_PAYLOAD_BINDING"
+                            }
+                        },
+                        "type": "MAP_CONTAINER"
+                    },
+                    "sysId": "8b82bf18e5276c8e423b6e4e0889b463"
+                },
+                "operation": null,
+                "targetId": "eeddHqfeeddfaaRAaaGWeeddLQGQaaneehhReehhVff",
+                "type": "EVENT"
+            },
+            {
+                "broker": null,
+                "clientScript": null,
+                "clientTransformScript": "",
+                "conditional": null,
+                "declarativeAction": null,
+                "event": {
+                    "apiName": "sn_canvas_core.NAV_ITEM_SELECTED",
+                    "payload": {
+                        "container": {
+                            "external": {
+                                "type": "JSON_LITERAL",
+                                "value": null
+                            },
+                            "fields": {
+                                "container": {
+                                    "table": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "x_2065908_colleg_0_event_registration"
+                                    }
+                                },
+                                "type": "MAP_CONTAINER"
+                            },
+                            "multiInstField": {
+                                "type": "JSON_LITERAL",
+                                "value": null
+                            },
+                            "navigationOptions": {
+                                "type": "JSON_LITERAL",
+                                "value": null
+                            },
+                            "params": {
+                                "type": "JSON_LITERAL",
+                                "value": null
+                            },
+                            "passiveNavigation": {
+                                "type": "JSON_LITERAL",
+                                "value": null
+                            },
+                            "redirect": {
+                                "type": "JSON_LITERAL",
+                                "value": null
+                            },
+                            "route": {
+                                "type": "JSON_LITERAL",
+                                "value": "record_request"
+                            },
+                            "targetRoute": {
+                                "type": "JSON_LITERAL",
+                                "value": null
+                            },
+                            "title": {
+                                "type": "JSON_LITERAL",
+                                "value": null
+                            }
+                        },
+                        "type": "MAP_CONTAINER"
+                    },
+                    "sysId": "8b82bf18e5276c8e423b6e4e0889b463"
+                },
+                "operation": null,
+                "targetId": "VtbbERfggMBaaffxjjccgDazSPUBES",
+                "type": "EVENT"
+            },
+            {
+                "broker": null,
+                "clientScript": null,
+                "clientTransformScript": "",
+                "conditional": null,
+                "declarativeAction": null,
+                "event": {
+                    "apiName": "sn_canvas_core.NAV_ITEM_SELECTED",
+                    "payload": {
+                        "type": "JSON_LITERAL",
+                        "value": {
+                            "external": {
+                                "url": "x_2065908_colleg_0_event_registration"
+                            },
+                            "fields": null,
+                            "multiInstField": null,
+                            "navigationOptions": null,
+                            "params": null,
+                            "passiveNavigation": null,
+                            "redirect": null,
+                            "route": null,
+                            "targetRoute": null,
+                            "title": null
+                        }
+                    },
+                    "sysId": "8b82bf18e5276c8e423b6e4e0889b463"
+                },
+                "operation": null,
+                "targetId": "lTeehhORvMwCaaWeeddjjfYKigYWggvNaa",
+                "type": "EVENT"
+            }
+        ]
+    }
+]</event_mappings>
+        <macroponent display_value="Default">0a024504c33e8790c481f6edd401313e</macroponent>
+        <macroponent_config>{
+    "bare": {
+        "type": "JSON_LITERAL",
+        "value": true
+    },
+    "headerLevel": {
+        "type": "JSON_LITERAL",
+        "value": "1"
+    },
+    "headingOnlyVisibleToScreenReaders": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "interceptNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "label": {
+        "type": "JSON_LITERAL",
+        "value": ""
+    },
+    "propagateNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "scrollable": {
+        "type": "JSON_LITERAL",
+        "value": "y"
+    }
+}</macroponent_config>
+        <name>Default</name>
+        <order>0</order>
+        <parent_macroponent display_value="Portal App Shell">b66bf1075b31101016fd7c1bf481c7a7</parent_macroponent>
+        <required_translations>[ ]</required_translations>
+        <rollback_screen/>
+        <screen_condition/>
+        <screen_type display_value="Events">71028dc0c33e8790c481f6edd401310d</screen_type>
+        <sys_class_name>sys_ux_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-14 10:53:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>46024504c33e8790c481f6edd4013147</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Default</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="College Event Registration Portal" source="x_2065908_colleg_0">078906dfc3264390c481f6edd40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_update_name>sys_ux_screen_46024504c33e8790c481f6edd4013147</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-14 15:21:17</sys_updated_on>
+    </sys_ux_screen>
+    <sys_translated_text action="delete_multiple" query="documentkey=46024504c33e8790c481f6edd4013147"/>
+</record_update>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="DELETE">
+        <app_config display_value="College Event Registration Portal App Config">7a5c6697236a4390b69b0be670d03877</app_config>
+        <description/>
+        <extension_point/>
+        <fields/>
+        <icon/>
+        <interoperable>false</interoperable>
+        <name>Dashboard</name>
+        <optional_parameters/>
+        <order>0</order>
+        <parent_macroponent display_value="Portal App Shell">b66bf1075b31101016fd7c1bf481c7a7</parent_macroponent>
+        <parent_macroponent_composition_element_id/>
+        <route_type>dashboard</route_type>
+        <screen_type display_value="Dashboard">c798aad4c37a4b90c481f6edd4013127</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-15 13:00:07</sys_created_on>
+        <sys_id>0f98aed4c37a4b90c481f6edd4013167</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Dashboard</sys_name>
+        <sys_package display_value="College Event Registration Portal" source="x_2065908_colleg_0">078906dfc3264390c481f6edd40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_update_name>sys_ux_app_route_0f98aed4c37a4b90c481f6edd4013167</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-15 13:00:07</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="DELETE" query="documentkey=0f98aed4c37a4b90c481f6edd4013167"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</application>
+        <file_path/>
+        <instance_id>0e4f484aeb9503905a2dfceacad0cdb4</instance_id>
+        <instance_name>dev400235</instance_name>
+        <name>sys_ux_app_route_0f98aed4c37a4b90c481f6edd4013167</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route"><sys_ux_app_route action="INSERT_OR_UPDATE"><app_config display_value="College Event Registration Portal App Config">7a5c6697236a4390b69b0be670d03877</app_config><description/><extension_point/><fields/><icon/><interoperable>false</interoperable><name>Dashboard</name><optional_parameters/><order>0</order><parent_macroponent display_value="Portal App Shell">b66bf1075b31101016fd7c1bf481c7a7</parent_macroponent><parent_macroponent_composition_element_id/><route_type>dashboard</route_type><screen_type display_value="Dashboard">c798aad4c37a4b90c481f6edd4013127</screen_type><sys_class_name>sys_ux_app_route</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-08-15 13:00:07</sys_created_on><sys_id>0f98aed4c37a4b90c481f6edd4013167</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Dashboard</sys_name><sys_package display_value="College Event Registration Portal" source="x_2065908_colleg_0">078906dfc3264390c481f6edd40131f2</sys_package><sys_policy/><sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope><sys_update_name>sys_ux_app_route_0f98aed4c37a4b90c481f6edd4013167</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-08-15 13:00:07</sys_updated_on></sys_ux_app_route><sys_translated_text action="delete_multiple" query="documentkey=0f98aed4c37a4b90c481f6edd4013167"/></record_update>]]></payload>
+        <payload_hash>-69429127</payload_hash>
+        <record_name>Dashboard</record_name>
+        <reverted_from/>
+        <source>078906dfc3264390c481f6edd40131fb</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-15 13:00:07</sys_created_on>
+        <sys_id>9798aed4c37a4b90c481f6edd401316d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a005821ad90000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-15 13:00:07</sys_updated_on>
+        <type>UX App Route</type>
+        <update_guid>1798aed4fc7a4b908350acb10be82d6c</update_guid>
+        <update_guid_history>1798aed4fc7a4b908350acb10be82d6c:-69429127</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-17 08:27:37</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_app_route">sys_ux_app_route</sys_db_object>
+        <sys_id>4399828fc9284e0b9165cb680b604671</sys_id>
+        <sys_metadata>0f98aed4c37a4b90c481f6edd4013167</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Dashboard</sys_name>
+        <sys_package display_value="College Event Registration Portal" source="x_2065908_colleg_0">078906dfc3264390c481f6edd40131f2</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_scope_delete display_value="">51795c214e144984869959bd67d92e44</sys_scope_delete>
+        <sys_update_name>sys_ux_app_route_0f98aed4c37a4b90c481f6edd4013167</sys_update_name>
+        <sys_update_version display_value="sys_ux_app_route_0f98aed4c37a4b90c481f6edd4013167">9798aed4c37a4b90c481f6edd401316d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-17 08:27:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

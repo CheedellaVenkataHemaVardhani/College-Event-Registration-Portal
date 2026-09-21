@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Record Page(request)">0b5c6697a86a439093758b7670776db2</macroponent>
+        <name>display_value_block_1_items</name>
+        <preset/>
+        <required_translations>[ {
+  "code" : null,
+  "message" : "{0}",
+  "comment" : ""
+} ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {TransformApiHelpers} params.helpers
+ */
+function evaluateProperty({
+    api,
+    helpers
+}) {
+    var modelArray = [];
+    var modelData = api.data.look_up_record_1.result;
+    var table = api.state.table;
+    var user = api.context.session.user.fullName;
+
+    function block(label, type, value) {
+        var out = {};
+        var labelNew =  helpers.translateSync("{0}", label);
+        out.label = labelNew;
+        var outval = {};
+        outval.type = type;
+        outval.value = value;
+        out.value = outval;
+        return out;
+    }
+
+    function getDate(item) {
+        if (item != undefined && item.displayValue != "" && item.displayValue != null) {
+            var itemDate = new Date(item.displayValue);
+            item.displayValue = [itemDate.getFullYear(), itemDate.getMonth() + 1, itemDate.getDate()].join('-');;
+            return item;
+        }
+    }
+
+    function addToModel(item, label) {
+
+        if (item != undefined && item.displayValue != "" && item.displayValue != null) {
+            modelArray.push(block(label, "string", item.displayValue));
+        }
+    }
+    if (table === 'sc_req_item') {
+        var requestedFor = api.data.look_up_record_3.result.requested_for.displayValue;
+        addToModel(modelData.state, "State");
+        addToModel(modelData.stage, "Stage");
+        addToModel(getDate(modelData.due_date), "Due date");
+        if (requestedFor != undefined && requestedFor != null && requestedFor != user) {
+            modelArray.push(block("Requested for", "string", requestedFor));
+        }
+        addToModel(modelData.number, "Request number");
+        addToModel(modelData.quantity, "Quantity");
+        addToModel(modelData.price, "Price");
+        var recurringPrice = modelData.recurring_price || {};
+        if (recurringPrice.displayValue && recurringPrice.displayValue.substring(1) !== "0.00") {
+            modelArray.push(block("Recurring price", "string", recurringPrice.displayValue));
+        }
+        addToModel(modelData.recurring_frequency, "Recurring frequency");
+    } else if (table === 'incident') {
+        addToModel(modelData.state, "State");
+        addToModel(getDate(modelData.due_date), "Due date");
+        addToModel(modelData.number, "Request number");
+        addToModel(modelData.caller_id, "Caller");
+        addToModel(modelData.urgency, "Urgency");
+        addToModel(modelData.cmdb_ci, "Configuration item");
+        addToModel(modelData.assigned_to, "Assigned to");
+    } else {
+        addToModel(modelData.state, "State");
+        addToModel(getDate(modelData.due_date), "Due date");
+        addToModel(modelData.number, "Request number");
+    }
+
+    addToModel(getDate(modelData.sys_created_on), "Creation date");
+    addToModel(getDate(modelData.sys_updated_on), "Last update");
+    return modelArray;
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 10:42:37</sys_created_on>
+        <sys_id>0f5c66972c6a439023df3a77fb64a5a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>display_value_block_1_items</sys_name>
+        <sys_package display_value="College Event Registration Portal" source="x_2065908_colleg_0">078906dfc3264390c481f6edd40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_update_name>sys_ux_client_script_0f5c66972c6a439023df3a77fb64a5a0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 10:42:37</sys_updated_on>
+        <target/>
+        <type>transform</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</application>
+        <file_path/>
+        <instance_id>0e4f484aeb9503905a2dfceacad0cdb4</instance_id>
+        <instance_name>dev400235</instance_name>
+        <name>sys_ux_client_script_0f5c66972c6a439023df3a77fb64a5a0</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes/&gt;&lt;macroponent display_value="Record Page(request)"&gt;0b5c6697a86a439093758b7670776db2&lt;/macroponent&gt;&lt;name&gt;display_value_block_1_items&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[ {
+  "code" : null,
+  "message" : "{0}",
+  "comment" : ""
+} ]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {TransformApiHelpers} params.helpers
+ */
+function evaluateProperty({
+    api,
+    helpers
+}) {
+    var modelArray = [];
+    var modelData = api.data.look_up_record_1.result;
+    var table = api.state.table;
+    var user = api.context.session.user.fullName;
+
+    function block(label, type, value) {
+        var out = {};
+        var labelNew =  helpers.translateSync("{0}", label);
+        out.label = labelNew;
+        var outval = {};
+        outval.type = type;
+        outval.value = value;
+        out.value = outval;
+        return out;
+    }
+
+    function getDate(item) {
+        if (item != undefined &amp;&amp; item.displayValue != "" &amp;&amp; item.displayValue != null) {
+            var itemDate = new Date(item.displayValue);
+            item.displayValue = [itemDate.getFullYear(), itemDate.getMonth() + 1, itemDate.getDate()].join('-');;
+            return item;
+        }
+    }
+
+    function addToModel(item, label) {
+
+        if (item != undefined &amp;&amp; item.displayValue != "" &amp;&amp; item.displayValue != null) {
+            modelArray.push(block(label, "string", item.displayValue));
+        }
+    }
+    if (table === 'sc_req_item') {
+        var requestedFor = api.data.look_up_record_3.result.requested_for.displayValue;
+        addToModel(modelData.state, "State");
+        addToModel(modelData.stage, "Stage");
+        addToModel(getDate(modelData.due_date), "Due date");
+        if (requestedFor != undefined &amp;&amp; requestedFor != null &amp;&amp; requestedFor != user) {
+            modelArray.push(block("Requested for", "string", requestedFor));
+        }
+        addToModel(modelData.number, "Request number");
+        addToModel(modelData.quantity, "Quantity");
+        addToModel(modelData.price, "Price");
+        var recurringPrice = modelData.recurring_price || {};
+        if (recurringPrice.displayValue &amp;&amp; recurringPrice.displayValue.substring(1) !== "0.00") {
+            modelArray.push(block("Recurring price", "string", recurringPrice.displayValue));
+        }
+        addToModel(modelData.recurring_frequency, "Recurring frequency");
+    } else if (table === 'incident') {
+        addToModel(modelData.state, "State");
+        addToModel(getDate(modelData.due_date), "Due date");
+        addToModel(modelData.number, "Request number");
+        addToModel(modelData.caller_id, "Caller");
+        addToModel(modelData.urgency, "Urgency");
+        addToModel(modelData.cmdb_ci, "Configuration item");
+        addToModel(modelData.assigned_to, "Assigned to");
+    } else {
+        addToModel(modelData.state, "State");
+        addToModel(getDate(modelData.due_date), "Due date");
+        addToModel(modelData.number, "Request number");
+    }
+
+    addToModel(getDate(modelData.sys_created_on), "Creation date");
+    addToModel(getDate(modelData.sys_updated_on), "Last update");
+    return modelArray;
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-08-12 10:42:37&lt;/sys_created_on&gt;&lt;sys_id&gt;0f5c66972c6a439023df3a77fb64a5a0&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;display_value_block_1_items&lt;/sys_name&gt;&lt;sys_package display_value="College Event Registration Portal" source="x_2065908_colleg_0"&gt;078906dfc3264390c481f6edd40131f2&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="College Event Registration Portal"&gt;078906dfc3264390c481f6edd40131f2&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_0f5c66972c6a439023df3a77fb64a5a0&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-08-12 10:42:37&lt;/sys_updated_on&gt;&lt;target/&gt;&lt;type&gt;transform&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>2121520836</payload_hash>
+        <record_name>display_value_block_1_items</record_name>
+        <reverted_from/>
+        <source>46a36a23c3020310c481f6edd401314f</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2026-07-19 08:11:38</sys_created_on>
+        <sys_id>98912258c33a4b90c481f6edd401316e</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>19f796e46900000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>UX Client Script</type>
+        <update_guid>589122582c3a4b90fc054b8b82cfd56e</update_guid>
+        <update_guid_history>589122582c3a4b90fc054b8b82cfd56e:2121520836</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-15 12:29:20</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>39f04849a1b84cf09072fa42573b3100</sys_id>
+        <sys_metadata>0f5c66972c6a439023df3a77fb64a5a0</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>display_value_block_1_items</sys_name>
+        <sys_package display_value="College Event Registration Portal" source="x_2065908_colleg_0">078906dfc3264390c481f6edd40131f2</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_scope_delete display_value="">51795c214e144984869959bd67d92e44</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_0f5c66972c6a439023df3a77fb64a5a0</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_0f5c66972c6a439023df3a77fb64a5a0">98912258c33a4b90c481f6edd401316e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-15 12:29:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_diagnostic_rule_dismiss">
+    <sys_ux_diagnostic_rule_dismiss action="INSERT_OR_UPDATE">
+        <dismiss_targets>{
+  "cfe61cc9a313121096a7a462a51e6120": [
+    {
+      "presentational_list_1": {
+        "queryId": "",
+        "dismissTimestamp": "2026-08-15T12:19:43.909Z",
+        "dismissedBy": "6816f79cc0a8016401c5a33be04be441"
+      }
+    }
+  ],
+  "945ff4359f3b1210763d485bf90a1ccb": [
+    {
+      "record_list_footer_container_1": {
+        "queryId": "now_default",
+        "dismissTimestamp": "2026-08-15T12:19:45.070Z",
+        "dismissedBy": "6816f79cc0a8016401c5a33be04be441"
+      }
+    }
+  ]
+}</dismiss_targets>
+        <sys_class_name>sys_ux_diagnostic_rule_dismiss</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-15 12:19:49</sys_created_on>
+        <sys_id>7c6f5a14c33a4b90c481f6edd4013144</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="College Event Registration Portal" source="x_2065908_colleg_0">078906dfc3264390c481f6edd40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_update_name>sys_ux_diagnostic_rule_dismiss_7c6f5a14c33a4b90c481f6edd4013144</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-15 12:19:49</sys_updated_on>
+        <table_name>sys_ux_macroponent</table_name>
+        <target_id>bd3c9e5cc3f64b90c481f6edd40131e5</target_id>
+    </sys_ux_diagnostic_rule_dismiss>
+</record_update>

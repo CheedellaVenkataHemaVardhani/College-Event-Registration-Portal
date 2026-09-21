@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_declarative_action_payload_definition">
+    <sys_declarative_action_payload_definition action="INSERT_OR_UPDATE">
+        <action_key>MY_TASK_REJECT_ACTION</action_key>
+        <applicable_to>035d270073151010c342d5fdbdf6a715</applicable_to>
+        <description/>
+        <label>Reject</label>
+        <payload_field_table>var__m_sys_declarative_action_payload_field_835c6697b36a4390b48828d8470b49bf</payload_field_table>
+        <payload_template>{&#13;
+        "table": "{{table}}",&#13;
+        "sysId": "{{sys_id}}"&#13;
+}</payload_template>
+        <sys_class_name>sys_declarative_action_payload_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 10:42:38</sys_created_on>
+        <sys_id>835c6697b36a4390b48828d8470b49bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Reject</sys_name>
+        <sys_package display_value="College Event Registration Portal" source="x_2065908_colleg_0">078906dfc3264390c481f6edd40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_update_name>sys_declarative_action_payload_definition_835c6697b36a4390b48828d8470b49bf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 10:42:38</sys_updated_on>
+    </sys_declarative_action_payload_definition>
+</record_update>

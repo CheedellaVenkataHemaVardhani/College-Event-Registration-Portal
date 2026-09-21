@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Landing Page">075c66970a6a43903a34bf29845641b7</macroponent>
+        <name>My task page redirection</name>
+        <preset/>
+        <required_translations>[ ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {any} params.event
+ * @param {any} params.imports
+ */
+function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+    const {
+        state,
+        emit,
+        data
+    } = api;
+    let sysId = "";
+    let table = "";
+    try {
+        sysId = data.look_up_record_3.result.sysapproval.value;
+        let tableDisplayValue = data.look_up_record_3.result.sysapproval.displayValue;
+        let tableStartsWith = tableDisplayValue.substring(0, 3);
+
+        if (tableStartsWith == "INC") {
+            table = "incident";
+        }else if (tableStartsWith == "RIT") {
+            table = "sc_req_item";
+        } else {
+            table = "task";
+        }
+
+        if (state.taskcard && sysId) {
+            api.setState("taskcard", "");
+            emit('NAV_ITEM_SELECTED', {
+                route: "rec_task",
+                fields: {
+                    table,
+                    sysId,
+                    approvalId: api.state.taskcard
+                }
+            });
+        }
+    } catch (e) {}
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 10:42:39</sys_created_on>
+        <sys_id>0f5c6697d76a43902912f991a35161a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>My task page redirection</sys_name>
+        <sys_package display_value="College Event Registration Portal" source="x_2065908_colleg_0">078906dfc3264390c481f6edd40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_update_name>sys_ux_client_script_0f5c6697d76a43902912f991a35161a4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 10:42:39</sys_updated_on>
+        <target/>
+        <type/>
+    </sys_ux_client_script>
+</record_update>

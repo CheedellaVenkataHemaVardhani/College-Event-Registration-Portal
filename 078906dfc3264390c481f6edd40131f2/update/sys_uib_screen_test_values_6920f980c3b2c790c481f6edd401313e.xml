@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_screen_test_values">
+    <sys_uib_screen_test_values action="INSERT_OR_UPDATE">
+        <macroponent/>
+        <macroponent_config>{
+    "5865e308432021105571609dc7b8f23b": {
+        "allRecordsSelected": false,
+        "columnFilteringPopoverDisplay": "",
+        "columnLimit": 0,
+        "columnPreferenceKey": "",
+        "columns": "",
+        "currentPage": 0,
+        "enableCardClickOpen": false,
+        "enableCellFiltering": true,
+        "enableColumnFiltering": true,
+        "enableColumnGrouping": true,
+        "enableColumnSorting": true,
+        "enableDeclarativeActions": true,
+        "enableDotWalk": true,
+        "enableInfiniteScroll": false,
+        "enableLiveList": false,
+        "enableOnlySingleSelection": false,
+        "enableQuickEdit": true,
+        "enableQuickFormNavigation": true,
+        "enableReferenceLinks": true,
+        "enforceViewRulesForQuickForm": true,
+        "fetchHighlightedValues": true,
+        "filter": "",
+        "fixedFilter": "",
+        "groupBy": "",
+        "listControllerId": "MwHipPjOAk8c9jUFSHj7YOW5",
+        "listId": null,
+        "listType": "default",
+        "liveUpdates": "off",
+        "nestBy": "",
+        "onlyEnableSelectionWhenRequiredByActions": true,
+        "pageSysId": "0a024504c33e8790c481f6edd401313e",
+        "showListOpenedByLinkSection": null,
+        "table": "x_2065908_colleg_0_event",
+        "view": ""
+    },
+    "sysId": "5446ae5bc32a4390c481f6edd401319e",
+    "table": "x_2065908_colleg_0_event"
+}</macroponent_config>
+        <screen display_value="Record Page(request) Default">3e5c6697066a439011c9dd2a1f0c0c7d</screen>
+        <sys_class_name>sys_uib_screen_test_values</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-14 14:14:57</sys_created_on>
+        <sys_id>6920f980c3b2c790c481f6edd401313e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="College Event Registration Portal" source="x_2065908_colleg_0">078906dfc3264390c481f6edd40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_update_name>sys_uib_screen_test_values_6920f980c3b2c790c481f6edd401313e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-14 14:14:57</sys_updated_on>
+    </sys_uib_screen_test_values>
+</record_update>

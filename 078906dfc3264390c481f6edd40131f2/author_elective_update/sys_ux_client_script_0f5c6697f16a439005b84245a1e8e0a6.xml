@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Landing Page">075c66970a6a43903a34bf29845641b7</macroponent>
+        <name>data_row_3_data</name>
+        <preset/>
+        <required_translations>[ {
+  "code" : null,
+  "message" : "{0} out of 5",
+  "comment" : ""
+} ]</required_translations>
+        <script><![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {TransformApiHelpers} params.helpers
+ */
+function evaluateProperty({
+    api,
+    helpers
+}) {
+    const input = api.data.evam_popular_articles.compositeDataViews;
+    for (var i = 0; i < input.items.length; i++) {
+        var model = input.items[i].propValues;
+        if (model.model.rating != "") {
+            model.detailValueTwo = helpers.translateSync("{0} out of 5", model.model.rating);
+        }
+    }
+    return input;
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-12 10:42:38</sys_created_on>
+        <sys_id>0f5c6697f16a439005b84245a1e8e0a6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>data_row_3_data</sys_name>
+        <sys_package display_value="College Event Registration Portal" source="x_2065908_colleg_0">078906dfc3264390c481f6edd40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_update_name>sys_ux_client_script_0f5c6697f16a439005b84245a1e8e0a6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-12 10:42:38</sys_updated_on>
+        <target/>
+        <type>transform</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</application>
+        <file_path/>
+        <instance_id>0e4f484aeb9503905a2dfceacad0cdb4</instance_id>
+        <instance_name>dev400235</instance_name>
+        <name>sys_ux_client_script_0f5c6697f16a439005b84245a1e8e0a6</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes/&gt;&lt;macroponent display_value="Landing Page"&gt;075c66970a6a43903a34bf29845641b7&lt;/macroponent&gt;&lt;name&gt;data_row_3_data&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[ {
+  "code" : null,
+  "message" : "{0} out of 5",
+  "comment" : ""
+} ]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+ * @param {params} params
+ * @param {api} params.api
+ * @param {TransformApiHelpers} params.helpers
+ */
+function evaluateProperty({
+    api,
+    helpers
+}) {
+    const input = api.data.evam_popular_articles.compositeDataViews;
+    for (var i = 0; i &lt; input.items.length; i++) {
+        var model = input.items[i].propValues;
+        if (model.model.rating != "") {
+            model.detailValueTwo = helpers.translateSync("{0} out of 5", model.model.rating);
+        }
+    }
+    return input;
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-08-12 10:42:38&lt;/sys_created_on&gt;&lt;sys_id&gt;0f5c6697f16a439005b84245a1e8e0a6&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;data_row_3_data&lt;/sys_name&gt;&lt;sys_package display_value="College Event Registration Portal" source="x_2065908_colleg_0"&gt;078906dfc3264390c481f6edd40131f2&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="College Event Registration Portal"&gt;078906dfc3264390c481f6edd40131f2&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_0f5c6697f16a439005b84245a1e8e0a6&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-08-12 10:42:38&lt;/sys_updated_on&gt;&lt;target/&gt;&lt;type&gt;transform&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1486298397</payload_hash>
+        <record_name>data_row_3_data</record_name>
+        <reverted_from/>
+        <source>46a36a23c3020310c481f6edd401314f</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by/>
+        <sys_created_on>2026-07-19 08:11:38</sys_created_on>
+        <sys_id>0d0e300cc3fa8790c481f6edd40131ee</sys_id>
+        <sys_mod_count/>
+        <sys_recorded_at>19f796e46900000000</sys_recorded_at>
+        <sys_updated_by/>
+        <sys_updated_on/>
+        <type>UX Client Script</type>
+        <update_guid>c90e300ccbfa8790a9c8ac8d154177ee</update_guid>
+        <update_guid_history>c90e300ccbfa8790a9c8ac8d154177ee:1486298397</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-14 10:35:55</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>19d4d4c354df4a6293807698970e2011</sys_id>
+        <sys_metadata>0f5c6697f16a439005b84245a1e8e0a6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>data_row_3_data</sys_name>
+        <sys_package display_value="College Event Registration Portal" source="x_2065908_colleg_0">078906dfc3264390c481f6edd40131f2</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_scope_delete display_value="">51795c214e144984869959bd67d92e44</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_0f5c6697f16a439005b84245a1e8e0a6</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_0f5c6697f16a439005b84245a1e8e0a6">0d0e300cc3fa8790c481f6edd40131ee</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-14 10:35:55</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="table" label="table" language="en" table="var__m_sys_declarative_action_payload_field_835c6697b36a4390b48828d8470b49bf">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>table</element>
+            <help/>
+            <hint/>
+            <label>table</label>
+            <language>en</language>
+            <name>var__m_sys_declarative_action_payload_field_835c6697b36a4390b48828d8470b49bf</name>
+            <plural>table</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2026-08-12 10:42:35</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>table</sys_name>
+            <sys_package display_value="College Event Registration Portal" source="x_2065908_colleg_0">078906dfc3264390c481f6edd40131f2</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+            <sys_update_name>sys_documentation_var__m_sys_declarative_action_payload_field_835c6697b36a4390b48828d8470b49bf_table_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2026-08-12 10:42:35</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

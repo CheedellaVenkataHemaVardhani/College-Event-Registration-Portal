@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,timeFromCreateToActivate=19827000,viewActivatedIn=diagramming</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name>FlowTemplate_Empty</copied_from_name>
+        <description>Automatically approve or reject student event registrations.</description>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>event_registration_approval</internal_name>
+        <label_cache>[{"name":"Created_1.current","label":"Trigger - Record Created➛Event Registration Record","reference":"x_2065908_colleg_0_event_registration","reference_display":"Event Registration","type":"reference","base_type":"reference","usedInstances":{"112a2ab8-d822-457e-8df2-c371482bc637":["record"],"4750f71b-7f38-40ee-87fe-e846341357ae":["record"],"50398678-8033-4bd6-8288-837096bb4fe7":["record"],"9ff7c57e-d953-40f2-8284-39654a37bfc9":["record"],"a87260fc-9f42-4872-877b-09832fa6d2b0":["record"],"22f8847a-c7bd-461b-979b-73e47ad105bc":["record"],"a2513a4e-3e21-47c0-a968-693815045851":["record"]},"attributes":{}},{"name":"{{static.6816f79cc0a8016401c5a33be04be441}}","label":"System Administrator","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"112a2ab8-d822-457e-8df2-c371482bc637":["approval_conditions"]}},{"name":"112a2ab8-d822-457e-8df2-c371482bc637.approval_state","label":"2 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"04d79bee-4e88-4005-ad1b-a0f8874b8bce":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.event","label":"Trigger - Record Created➛Event Registration Record➛Event","reference":"x_2065908_colleg_0_event","reference_display":"Event","type":"reference","base_type":"reference","parent_table_name":"x_2065908_colleg_0_event_registration","column_name":"event","usedInstances":{}},{"name":"Created_1.current.student","label":"Trigger - Record Created➛Event Registration Record➛Student","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_2065908_colleg_0_event_registration","column_name":"student","usedInstances":{}},{"name":"Created_1.current.student.email","label":"Trigger - Record Created➛Event Registration Record➛Student➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"a87260fc-9f42-4872-877b-09832fa6d2b0":["ah_to"],"22f8847a-c7bd-461b-979b-73e47ad105bc":["ah_to"],"a2513a4e-3e21-47c0-a968-693815045851":["ah_to"]}}]</label_cache>
+        <master_snapshot>6b2adf27c3eec390c481f6edd40131c9</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Event Registration Approval</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>ed72bba7c3a20790c481f6edd4013191</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 04:56:48</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b7c62eabc32ac390c481f6edd40131d1</sys_id>
+        <sys_mod_count>45</sys_mod_count>
+        <sys_name>Event Registration Approval</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="College Event Registration Portal" source="x_2065908_colleg_0">078906dfc3264390c481f6edd40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_update_name>sys_hub_flow_b7c62eabc32ac390c481f6edd40131d1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 10:27:19</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record>8272fba7c3a20790c481f6edd401316c</version_record>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=b7c62eabc32ac390c481f6edd40131d1"/>
+    <sys_variable_value action="delete_multiple" query="document_key=b7c62eabc32ac390c481f6edd40131d1"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_2065908_colleg_0_event_registration">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>false</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 10:27:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>ed72bba7c3a20790c481f6edd4013191</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 10:27:19</sys_updated_on>
+        <table>x_2065908_colleg_0_event_registration</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>b7c62eabc32ac390c481f6edd40131d1</identifier>
+        <identifier_type>flow</identifier_type>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 10:27:19</sys_created_on>
+        <sys_id>2572bba7c3a20790c481f6edd4013193</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 10:27:19</sys_updated_on>
+        <trigger display_value="">ed72bba7c3a20790c481f6edd4013191</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=b7c62eabc32ac390c481f6edd40131d1^sys_idNOT IN2572bba7c3a20790c481f6edd4013193"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=b7c62eabc32ac390c481f6edd40131d1"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=b7c62eabc32ac390c481f6edd40131d1^sys_idNOT IN7fc62eabc32ac390c481f6edd40131d5"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>b7c62eabc32ac390c481f6edd40131d1</id>
+        <name>Event Registration Approval</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 04:56:48</sys_created_on>
+        <sys_id>7fc62eabc32ac390c481f6edd40131d5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 04:56:48</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=7fc62eabc32ac390c481f6edd40131d5"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=b7c62eabc32ac390c481f6edd40131d1^sys_idNOT IN1707a6ebc32ac390c481f6edd40131bd,6307e6ebc32ac390c481f6edd4013118"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Event Registration Approval">b7c62eabc32ac390c481f6edd40131d1</model>
+        <model_id>b7c62eabc32ac390c481f6edd40131d1</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_b7c62eabc32ac390c481f6edd40131d1</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 04:57:52</sys_created_on>
+        <sys_id>1707a6ebc32ac390c481f6edd40131bd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 08:36:02</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1707a6ebc32ac390c481f6edd40131bd"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Event Registration Approval">b7c62eabc32ac390c481f6edd40131d1</model>
+        <model_id>b7c62eabc32ac390c481f6edd40131d1</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_b7c62eabc32ac390c481f6edd40131d1</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 04:57:52</sys_created_on>
+        <sys_id>6307e6ebc32ac390c481f6edd4013118</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 08:36:02</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6307e6ebc32ac390c481f6edd4013118"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=b7c62eabc32ac390c481f6edd40131d1"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b7c62eabc32ac390c481f6edd40131d1"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=b7c62eabc32ac390c481f6edd40131d1^sys_idNOT IN6557eaebc32ac390c481f6edd40131f1"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Event Registration Approval">b7c62eabc32ac390c481f6edd40131d1</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 04:59:06</sys_created_on>
+        <sys_id>6557eaebc32ac390c481f6edd40131f1</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 08:36:42</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuviat23iRQNsN6jjbR8WqUBJQ1soTboSpcS7yL93qIst6+LYsbJ1ngKRNOfM4ZkzZL5+1xlxgelX+py4DPSeHnAJISdsvlkDDks17HCyUnMrwn0iRbjRr2QYQ0+noVjNYbVmROJiSliEgyL0IdSvzJ6eEBbD/Sa69XEn/H26Tb6nnk/j95NjGcPBxBg7nmAMFo7hQAJcOiEsgkiGRAaC43o/iDDS5s/8Z1O1Rpvtr/GWAfND4PrV14eeviYhhpQKzvfKVKAwedQjEwsMzzZtyzIMa9w33aHtmpZvEzAM3LDKTyUH2UDTjgB4ksB98Lfc1BgMgfh3nG22K5Z4ABlbK/IUBd9w97Gh1lFA7B5kc9tPJyclG/aWIvDgbp2SkY5kOLNJweIV/5zhV3QCJTGTBZ04Eke4H6wVZAUiR0Tvl+JxVgT8GPA0u3ySCY+w7ReRMgzcWEKkCKcBQ+qdjJtIxGGKfja9vpvdOH99mF//Np05s+n9fHZ7PZ/e6M9pXs6/sdoxQ5hjcbJ0nrca+BgAUwcYbSIHT7KnR14YrOUHTwZJocTn3k7d14L7QS6RisK9YiraV3iR/SGJG0aryL1SxELof0//qMs4GzxNt8MhIT6QFt26tKTbcuYN0GQDCeXsDik4HzlGwn3D+J9EnBvVazX8SLiMHCkc4vtOiSUsedxYpSh8YDe7eDgeLBYo+4CvYxm9KOost+cXFRzGHH/gbM+jruOUti1/n9AVUTFYhQU3OWD6Kd9xFnNNcM2Lw1AZKZ6rVuyupaiUFujtiixyZuk9MPBkSQz0S1T++j2IooAvSui3wdORenS2KUMoTPWcoA9dFnGd9KSST6WYT65k06TUBWoZI1XHpmG71DRGxoBQ3zYMzypVch1MK0pZkcSbVPRp9RylYmRHnH6V4hy8Ua6Go7Sb7Au/IEFJJLeN626gmR1BsxS0iv3ZJ/nfVpbZ8M2+Og+l1nHvJ35C8Bd+keMxvf0IB6RMPKKzvsL9qMDbZChi7lddSO2pBfh3b0VHvucS75/DYXcrtJ/yY/v50jxwR3shXMI3HbifTU13An0w0PRs9Dt3MJm4HrEoHQ1HYJkV99vBaMT2LlzvhWNPmnTT5oCNyk2aBH+C950BsOaDJwM83wFzYTb6Xzb3PpzucQncQaihw5SX1QxvwQIfirluq70WOtnV97kVT8cTb2CORt4IXy1Y8bQPLjH71oBMRkN7PKhUfA3KIZiygZkf8pZRr1AFpMUNvmRTl/U4f0vZRiClakend+l0PckClPqlOhItNRQRaopO7Xa3ULsH7H7pa7azri3kstavMfSvOL4XWt3uPgv+SwOcLl9PHK/3x1DTAuXSrhMVkST7rJ/9pIL+eDChdrPF0EmTxezAtMO8+OvFkVJIWkXVdM84tvSSxgpuvRi8opgqMinfGA5caboixeycFOvtSLHPvkYVtdj6jnwN2HfUwtJ7xev7mODgCNro0wHV8n8Rgq+5G00uAclkeFPGUJqK22XnyK68tUaGw1p+Y+muRymaq2nfCA0ntPCHJP42jaoihW5fwOCPyGBgt9yHJ9UXcBOgF/BefNs6WSJJk+IO9q7T9q3u2di9ShW0r4gj+1KnWTc3p/OybmxPL2V9fuM59H5vQHGhLeXhPxLK8c5aHwAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=b7c62eabc32ac390c481f6edd40131d1^sys_idNOT IN1ef762ebc32ac390c481f6edd40131d7,2749ba23c3eac390c481f6edd4013102,88a9dbe3c3eec390c481f6edd4013159,8d299ba3c3eec390c481f6edd40131d1,d67a32e3c3eac390c481f6edd4013118,e97b3267c3eac390c481f6edd4013121"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent/>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Approval">b7c62eabc32ac390c481f6edd40131d1</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 05:01:54</sys_created_on>
+        <sys_id>1ef762ebc32ac390c481f6edd40131d7</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 11:08:33</sys_updated_on>
+        <ui_id>112a2ab8-d822-457e-8df2-c371482bc637</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1YXW/iOBT9KyjPlHXIB6FvVdlKs9qdkWhnXkoVOfYN9cgkTJx0yiL++9zEzkehw8AOldpVXxC+99o+Pj4H29yuLcGtcwtc3/HwYxQ7xB7aJAA/CNiYUBb4vuc6Vt9K6AKwki6XWfpAZZgBVWmCCWwUZQa/cqGWkq6+tBF2LyTPILHOb+/61pJmOEoOmXW+3kodCkPSCCSWXhgcvWmN46cA89WyTKg8E8nctP82w1zXwTTjJaxh34LHHBIOiCemUkHfWtCE0zzNVk0Eh+afEtkG7kWS6wUv6KMS/+J8tk/Kwhhwicyw0TRDw5QOxxOaU0RSsLzIGuJSwUBpcjjEtJD5ZTemCz4tc4GLrLrkNJJ171QWi+SjZsRqBuhsTKEQBCzLlZbQzTri6/v0+7RGeSWSihSTlCmjsmnRHKmLirzEs7YKcbPFso7s8AwSFjhjuMB9wkhYbpaoZkHQi8FcYmMQy/Q7olNingwoK1c4wB2ggyuMT6rwF5qJcrn/4DDYuZzucyK+FfCh1JE/jPwxCfgZj0l05gaOd0YZkDPwbQ887jPPdqxN31IrdSmpUi1RuEPht6JcpqbNEBRqjssuLBPL/AJBPYDhYtM3LiJ2PITxeEgimxCHkMBjJHAgckb+yKE8eEaksQDJOyaqE7tm6mSOM9UBqHZMdWVg/QyusVTVDKuip7aq+vc+6sTJrRUQ8pa8hZP/jrVexjHHq19T8AsLsL1ig85B8jUtsuQZB5zgGDkARK34vzSKbcFvg/svenfe9f7/1/so2Cc1RlpJZcBQGB2hr9eXuPk58NAesCJDmvLN5gTqPwBSrf5pjWkbo9E7T1lR7YXgW4KfmEzvw6RVPNmveK2LQwTvDN/l/irlzrx92orHrZR4gSShuruCn1ka+8w6n1lJmsDM6s+ssiostVWFsQIRNokqtl5vNjpSZNQMYHeabW9OV6qqVOweeCF19EkkrMRv4qfw2wGc1H6bFNCbaFJ2aaqfKTVOzYvYOWuuTUE10h83onvmeCc7c9y3dOL87uvl5R4lYXNtR4fhD8ULvDrcvfqDjtiaazxLEy7KFaiOPfXlH9QUvgLL1UWy+ny7XqscLcYGfmD78WjMGKEBsX2X2MyjjhMBcSNwXXuzudu10glGPM6KB1DRHH3oIPUraowl278UTKeuHds/IkzSWNE91WH4xm5/r9OLp7ddxPZes1irLc1ma7THcEh8b0wCFJuUMA9JCA/lvBnMhcr1mbbrpj/Lmt70ac1x/jgAc+2PGwN6aw3GEVXzuYdQ1W3rIWQfeShpazzrhHcfvBof3P0AgOJY8DwWAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1ef762ebc32ac390c481f6edd40131d7"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Approval">b7c62eabc32ac390c481f6edd40131d1</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>04d79bee-4e88-4005-ad1b-a0f8874b8bce</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 06:17:37</sys_created_on>
+        <sys_id>2749ba23c3eac390c481f6edd4013102</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 11:08:33</sys_updated_on>
+        <ui_id>50398678-8033-4bd6-8288-837096bb4fe7</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXW/aMBT9K8jPKEoIIOBtgiFN6lqJTrx0VeTYN2DJ+ZjtUBjiv+86cQKFrqNSX9Dydr/sc07uSZ72RHAyIX3gfjAOhiwMwrDn+71RP4iHYRz0eEgBAtIlGU0BOxWwXHGMN1SWNrHfTxVQAzwKPFYqBZk5HLDOhS4k3S1dG2bYWkiOdTJ5eu6Sgio80YAik/1Z6VpIksYgsXXRYDrHaHaFjXnOyhRxRaJJ3rnJmat0vs2wgkMWTuB3CWwNZBwQSEKlhi5JacapydWOTIwqMYGk+UMmd23HWmSmJprSrRa/8ea+b/sSQGbMidCGkROoTiczaugjnsxMqVq9csFA15pwSGgpzfQ0Vzc8FEbkWT1iaCyb6VyWaXZfK0LaA07eR6kRBBSWp0Ve00oe1/nLogE5F1kliaMoc0ZlG1FjlIhLY+HsCUioNE5pUYhsFRUq34hqGKGk3kpi4CUyf8E7tVhlHmUWt4eqUm+O+VmVXlIlLInveAwOH7pE7/RUUq2PVFDD6FdpkdTEHIWoUqGSIKo2wQ4zJQrzBa/agAN+6LqljwfvbRgbHxfq5Mzj4m+jnj8cjP1RhFJLWEV+BBsLQ8FKaKNo9VoujPDV9nQWr3s+Zo0rgDfW+FEtxNtEnDsucnens537uuC8Mfg0b4xuyRuOxs2b41+W8HvvfnRPNqlygT6xgzbUlPpn6fshZ3mWCJUCv1z/v7V9zAFX4GwcMBcguX4DeLP+kCI+A1FN5MwCrthZumL7i/g0HwRDv3puyA3/zZ/i+Q97RfxPIAkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2749ba23c3eac390c481f6edd4013102"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Approval">b7c62eabc32ac390c481f6edd40131d1</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>7b8c0a6a-ba9a-46b6-ad9f-0e2e6caa26b0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 08:38:49</sys_created_on>
+        <sys_id>88a9dbe3c3eec390c481f6edd4013159</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 11:08:33</sys_updated_on>
+        <ui_id>a2513a4e-3e21-47c0-a968-693815045851</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2YXW/bNhSG/wqha0WVv+PcdcmCFkhboAk6DE0hUCJlc6NEjaTiuIH/+w4l6svOXLnxsATLRS50+PUe8n14zHx9cBhxzpwxOfWnYTzGM380HPn+6XA+D0fz2D+dzf1BRBzXSXFCoaekkZDm+w7z3AQeHs4lxZqSYOBFuZQ01ZsNtBOmMo7XX2w3iERLxgm0O2dfv7lOhiXMqKl0zh62mvpK4jikHLreYLmgGn2upG1L1evMfBMR5QnIC1gVvLITXNgW9P4CWmCQUeW7Dr3XNCUU5MSYK+o6CU4J1kKu6wjkTj6lvAksWaphyrdKiYjBviiklxTRBDOOVkwvEUalMM8x890r9h3EjYZmqpjCHkRGK0sjRkCR0woHdkuh+X3THF9gja+1zCOdy3qnBYuoKneT0BjnXJ+3Y2WHT5lmIi2HaBzyarTgeZJ+LDfRqSdonWSuQAzNzN6YZGFxSDy+XorV50rsJUuLXbS7wkWEef0VX1Mso+Ulo9wcdZonIfR1Hay1ZGGujUwwBYdezTpBIdWsBT0pp8VRJjjLWLoIMinuWLEgyE+8BYcPL+ZiBeMVW6QejkyuHpwe9i4hflGEv2DJTOIfYBoYvHEdtVbnHCvVpA/7H/yVG/XlZnTlmNFBYTgzOJIs029hqTtqk924FrHBfJ+fybjxbWvOBrP7YOhPJ3P/NIDj4XQR+AG9MzIkXTClJS6Ocge7X00fIKPT5zAQewhvQDQmejwRC+FO7Ko9Fn0sGyyCgwMRLI1oCbwB7HR5M5TAIW3l1dSd+l3q/oG250FZzU5vzLo4/TvIgElUUPre5lYs/hMo/QggfzoNw2k4mY0aH86jmMzCeIpn0ajx3QquXZlg+WdQXLstiga7hNgL5TAmemipmICrmueEot8qUft0WkhCIeDuS7cJAaVvLovdrQkZPqlIldZEWiA4TL6G0lRLMsGmcOkl1ogppOC0PHQjELNZtUa4aC1ylORKQzcNLR34OtVu/Hy5s3aw0YtHvfIiwDw+gJP9hQA3xsbLQIv9vxE9pXOztFcYbLNBu2T2HHUYuT2SqKuZ2M3IAgrFFE5qi8/rKmjZHO1nsyxWO2i2ipP/fDF5KRQY4ZwlrDBEye/xwSB7PUX9jo2iqAXGEd5JPRavDH1+vqvkEEOPf67YvDr6xTl6sPfxTacdH4XHtnSP1StL/7Ll6fBgU09eTf0/MfVkv62ijpFUHv5BI90y9u5TGj5MH0r6vLvbnQ/8yfJj3RUO17XqxzI5BIvp64+X/5yK4yOA91opHnbvUkHWLf/f5r4/ijJkNJ9kWC9PtDhJBaFFA7l1Ju7QHbgj+PNvy970HeVcuOXIN1kZu00PmGlQzfS7yCVq/68LxUKWL9QCtRVWKBXaPGRh7ynxuovuEmpF9NB5LAGHUd/jqOoiWB7UzslZ3pc64Vu0v7v5cNWwPntiCZxOJqPpK+1ProHZigyJFFlmcztyHfz2N6g2sG7uGQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=88a9dbe3c3eec390c481f6edd4013159"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Approval">b7c62eabc32ac390c481f6edd40131d1</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>04d79bee-4e88-4005-ad1b-a0f8874b8bce</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 08:36:42</sys_created_on>
+        <sys_id>8d299ba3c3eec390c481f6edd40131d1</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 11:08:33</sys_updated_on>
+        <ui_id>22f8847a-c7bd-461b-979b-73e47ad105bc</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2YXW/bNhSG/wqha0WVv+Pcdc6CFkhboAk6DE0hUCRlc6NEjaKSuIH/+w4l6svOXLnxsATLhS90+PUe8n14JH99cDh1zpwxPfWnYTTGM380HPn+6XA+D0fzyD+dzf0BoY7rJDhm0FMxIpV5vsUiN4GHh4ViWDMaDDySK8USvdlAO+VZKvD6i+0GEbLigkK7c/b1m+ukWMGMminn7GGrqa8kgUMmoOs1Vkum0edK2rZUvU7NM5Ukj0FewKvgpZ3g3Lag9+fQAoOMKt912L1mCWUgJ8IiY64T44RiLdW6jkDu9FMimsCKJxqmfJtlknDYlwzpFUMsxlygO65XCKNSmOeY+e4z/h3EjYZmqojBHhCjlSeEU1DktMKB3VJoft80R+dY4yutcqJzVe+05IRl5W5SFuFc6EU7Vnb4lGouk3KIxqGoRkuRx8nHchOdeoLWSeYZiGGp2RuTLCwOiUdXK3n3uRJ7wZNiF+2uCEmwqJ+iK4YVWV1wJsxRJ3kcQl/XwVorHubayARTCOjVrBMUUs1a0JMJVhxljNOUJ8sgVfKWFwuC/NhbCnjwIiHvYHzGl4mHicnVg9PD3gXEz4vwF6y4SfwDTAODN66TrbOFwFnWpA/7H/yVG/XlZnTlmNFBYTgzmCie6rew1C2zyW5ci9hgvs/PdNz4tjVng9l9MPSnk7l/GsDxCLYM/IDdGhmKLXmmFS6Ocge7X00fIKPT5zAQewhvQDQmejwRC+FO7LI9Fn0sGyyCgwMRLI1oCbwG7HR5M5TAIW3l1dSd+l3q/oG250FZzU5vzLo4/TvIgEmyoPS9za1Y/CdQ+hFA/nQahtNwMhs1PpyTiM7CaIpnZNT47g6uXRVj9WdQXLstiga7hNgL5TAmemipmICrWuSUod8qUft0WkhCKeHuS7YJAaVvLordrQkZPqlIldZEWiI4TLGG0lRLMsGmcOkV1ohnKIPT8tC1RNxm1RrhorXMUZxnGrppaOnA16l24+fLnbWDjZ4/6pUXAebxAZzsLwS4MTZeBVruf0f0Mp2bpb3CYJsN2iWz56jDyO2RRF3N5G5GFlAopnBSW3xeVUHL5mg/m2Wx2kGzVZz854vJS6HACBc85oUhSn6PDwbd6ynmd2xESAuMI3wn9Vi8MvRisavkEEOPf67YvDr6xTl6sPfjm007PgqPbekeq1eW/mXL0+HBpp68mvp/YurJfluRjpGyPPyDEd0y9u6nNFrIJOIqZrTPh3en94EvLT9WXgFxVet+LJdDwJi+vr7851wcHwK810rRsHubSrpuEXCT+/6IpMhoPkmxXp1oeZJIyooGeuMM3aE7cEfw82/K3uwdE0K65cg3aRm7SQ6YaVDN9LvMFWr/24Uiqcpv1IK1Fc5QyFiCSMWZ1112F1Iro4fS40k4jPwex1WXwvKwdk7PMr/Ssdgi/t31h8uG99kTC+F0MhlNX4l/ciVM7+iQKpmmNrcjV8NvfwMj/Tn19BkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8d299ba3c3eec390c481f6edd40131d1"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Approval">b7c62eabc32ac390c481f6edd40131d1</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>7b8c0a6a-ba9a-46b6-ad9f-0e2e6caa26b0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 06:22:43</sys_created_on>
+        <sys_id>d67a32e3c3eac390c481f6edd4013118</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 11:08:33</sys_updated_on>
+        <ui_id>9ff7c57e-d953-40f2-8284-39654a37bfc9</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXW/aMBT9K8jPKEoIIOBtgiFN6lqJTrx0VeTYF/DkfMx2KAzx33edOCGDrqNSX9B48/1wzjk5hzwdiOBkQvrA/WAcDFkYhGHP93ujfhAPwzjo8ZACBKRLUpoATipgmeJ43lJZ2MLhMFVADfAo8FihFKTmeMQ+FzqXdL90Y1hhGyE59snk6blLcqrwRgOKTA5nrWshSRqDxNFFjekco9nn9swzViSIKxJ18c5tzlyn82WGHVyycAK/S2BnIOWAQFZUauiShKacmkztycSoAgtImj+kct9MbERqKqIJ3WnxC5/c9+3cCpAZcyI0x8gJVJVXM2roI97MTKEavTLBQFeacFjRQpppu1YNPORGZGm1Ymgs6+1MFkl6XylCmgta76PQCAJyy9Mir2itHjfZy6IGORdpKYmjKDNGZXOixigRF8bCORCQUGqc0DwX6TrKVbYV5TJCSby1xIO3ktkLPlOLdepRZnF7qCr15lifleUlVcKS+IrX4PKxS/ReTyXV+kQFNYx+FhZJRcxRiEoVSgmi0gl2mSmRm0/4qC044MeuM308eMthbHwyVOvOk/F3Uc8fDsb+KEKpJawjP4KthaFgLbRRtHwtF0H4bGc6iz9n3heNK4DX0fhWGuJ1Ii4dF7W79m7nvmq4bAw+LBujW8qGo3Hz4fhXJPzem3+6LSeVKdCtOGhDTaG/F74fol1/AMNPwqX7/zL1Pv9fgbL2/1yA5PoV2LX5IUF4BqKKxlkAXLOzdM3mA/FhKQiGfvm7oSz8N9+J59/mxD7lHgkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=d67a32e3c3eac390c481f6edd4013118"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Approval">b7c62eabc32ac390c481f6edd40131d1</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 06:27:02</sys_created_on>
+        <sys_id>e97b3267c3eac390c481f6edd4013121</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 11:08:33</sys_updated_on>
+        <ui_id>a87260fc-9f42-4872-877b-09832fa6d2b0</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Y32/bNhD+Vwg9K6psx3acty5Z0AJpC9RBh6EpBIqiLG6UqJFUHC/w/76jRP2yU9duPCzB8pAHH4/kd3ffdyfm64PDIufcOY3O/EkYn+KpPxqOfP9sOJuFo1nsn01n/oBEjutkOKXgKSkR0vy+w7wwhoeHC0mxplEw8EghJc30eg3rEVM5x6sv1g0sJGE8gnXn/Os318mxhBM1lc75w8bSvpA4DikH1xssF1SjzzW0Tah6lZvfkSBFCvACVhuv7QGXdgW9v4QV2GRQ+a5D7zXNIgpwYswVdZ0UZxHWQq4aC8Qefcp4a0hYpuHIt0oJwiAvCumEIppixtGS6QRhVAHzHHPevWJ/A7jR0BwVU8gBMVhZRlgEiJyOObApheX37XJ8iTWea1kQXcgm04IRqqpsRjTGBdcXXVvl8CnXTGTVFo1DXu8WvEizj1USneaATiULBWBobnJjgoXLIfB4nojl5xrsFcvKLNqscEEwb37Fc4olSa4Y5abUWZGG4Os6WGvJwkIbmEAKDl7tPUEJ1dwFnpTTspQpznOWLYJcijtWXgjwU2/B4YcXc7GE/YotMg8TE6sH1cPeFdgvS/MXLJkJ/AMcA5vXrqNW6oJjpdrwIf/BX4VBXyWjD8fsDkrCmc1Esly/havuqA127VqJDWa7+BydtrztnNnK7D4Y+pPxzD8LoDycLgI/oHcGhqQLprTEZSm3ZPer8QFl9HwOE+IewFshGhI9HogV4ZbtursXfawWrAQHB0qwIqJV4A3ITledoRIc0hZeo7ozv6+676jteais0c7eMuvL6d+RDJBEBRXvbWzl5T8hpR8JyJ9MwnASjqejloczEkfTMJ7gKRm1vFtC25Upln8GZdvtqGiwrRDbUA7TxB5Yak1Aq+ZFRNFvNahdOK1IQiGg92WbCgGkb67K7DYKGT5pSFXURFogKCZfwWhqIBljO7h0gjViCimoloduBGI2qs4OF61EgdJCaXDTsNITX2/anT5f3Vk6WOvlo1x5EcI8vgDHuwcBbomNk0CL3d+IntKFudorCbZeo21l7rnrMOXuEUQzzcR2RFagMEyhUhv6nNdGq83Rbm1Ww2pLmp3h5D9fmbwUFRjgnKWsJESl3+MLI9rJKer3aERIRxhHeCftcXlN6IuLbSSHEPr054bNK6NfHKMHOx/fdNLjUXhsSu9xe03pXzY4HR5M6vErqf8npB7vphXpEUkV4R+U6A6xu49oNC9CQAvfJtt0/67fgR8qP0Zbi2DeYH0M/yFimLx+svznWjg+8fFOKsXDfgcV0arD+tvC90ckRwbzSY51cqLFSSYiWi5Et87Ad4fuwB3Bn39budN3lHPhVlvf5JXtNjvkqEF91O+ikKj7Py6UYIVCSjOkCgLEUHHB4emqaqEhoKt5quIlZhqqYp62UBfMPQRnoSXj3DxJKeQJXAW8caV95AqoPjxbI0qYMhfBISmGCvbj2Ba8jWuP0J9vSIf1pj0I1Qzoik5b/LJdKdEp3+hJ724+XLcdafrE8TwZj0eT15705PmcL6NhJEWe29iOPKO//QOo3uF9ihoAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e97b3267c3eac390c481f6edd4013121"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=b7c62eabc32ac390c481f6edd40131d1"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=b7c62eabc32ac390c481f6edd40131d1^sys_idNOT IN972a76a3c3eac390c481f6edd4013141,e1c67aebc3aac390c481f6edd4013129"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">2bf813a3c3eec390c481f6edd40131f8</block>
+        <comment/>
+        <connected_to>04d79bee-4e88-4005-ad1b-a0f8874b8bce</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Event Registration Approval">b7c62eabc32ac390c481f6edd40131d1</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 06:21:25</sys_created_on>
+        <sys_id>972a76a3c3eac390c481f6edd4013141</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 10:27:15</sys_updated_on>
+        <ui_id>7b8c0a6a-ba9a-46b6-ad9f-0e2e6caa26b0</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">2bf813a3c3eec390c481f6edd40131f3</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Event Registration Approval">b7c62eabc32ac390c481f6edd40131d1</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 06:06:33</sys_created_on>
+        <sys_id>e1c67aebc3aac390c481f6edd4013129</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 10:27:15</sys_updated_on>
+        <ui_id>04d79bee-4e88-4005-ad1b-a0f8874b8bce</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1UTW/bMAz9K4PPjmHLcZLmFmwoMGBbgbXoZSsMWpITYbKkSXLSLMh/H+WPtGgTbBh63M16FMn3qEcfIt1603p3p1fOibWKlt8e4kiogOH3IVLQ8GgZUa2Y8EKrsgPiaAuyDYGVMVZvOUOICWck7O9fR+hGSGb5UN2AxRqe22h5eBHye8NLCRWXWODWW6HWmC4YnuoU6uyKZjQns5ykKVlMs2qWVxlhOXDI8d6Y+H4k++5Th8QXVYR+iLuxk7Ys0MrSOOKPniuG9Jc1SMfjqAHFwGu7PyGWA7tR8gnYCOWxXBQuPzrxC2uToggXa44aKe+Dp2M5jKyH6UYLym9MINgjHio55FAt20Z96XWEYfMaWunHYSPSOqzHTSAdWAyU6tuN3n0dG14L1QkcglJTkKcTeBxD1XruwsNwyRssVDZgDA6nDI8pumTk0iRriYeklnqHTYNzEqCBeIIzguQa8Q8dfA9WBBWfsQwm9zQrcIKWncuwnLco4diNpfzZBkK9wEFK2U8DLzhqhfEr7LPlA+tj/Nqiz9x5OGQZAQLVYsIWhEymxZxPFqwmE5rPs+mCVHSWzxPorAqydB48Px6/t2maM7ho7bcq+xZ7cQVFXWRpcX4vprNze3FmIy4vA/nDMoTn+8tdSNP0/zI8Xwbhyt7Ug7au+T/vwkMwft/B9b5hnAqHRO4C9nH8q4fAHg0g6HNop+2PIOEJO/4GiLXBKh8GAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=b7c62eabc32ac390c481f6edd40131d1"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=b7c62eabc32ac390c481f6edd40131d1"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b7c62eabc32ac390c481f6edd40131d1</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 04:57:52</sys_created_on>
+        <sys_id>ab07e6ebc32ac390c481f6edd4013113</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="College Event Registration Portal" source="x_2065908_colleg_0">078906dfc3264390c481f6edd40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 04:57:52</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_b7c62eabc32ac390c481f6edd40131d1</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 04:57:52</sys_created_on>
+        <sys_id>ef07e6ebc32ac390c481f6edd401311e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="College Event Registration Portal" source="x_2065908_colleg_0">078906dfc3264390c481f6edd40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 04:57:52</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_b7c62eabc32ac390c481f6edd40131d1"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_b7c62eabc32ac390c481f6edd40131d1"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=integrated,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>9a41b6c2ff12101088e94ee9453bf1a4</copied_from>
+        <copied_from_name/>
+        <description>Automatically approve or reject student event registrations.</description>
+        <flow_priority/>
+        <internal_name>event_registration_approval</internal_name>
+        <label_cache>[{"name":"Created_1.current","label":"Trigger - Record Created➛Event Registration Record","reference":"x_2065908_colleg_0_event_registration","reference_display":"Event Registration","type":"reference","base_type":"reference","usedInstances":{"112a2ab8-d822-457e-8df2-c371482bc637":["record"],"4750f71b-7f38-40ee-87fe-e846341357ae":["record"],"50398678-8033-4bd6-8288-837096bb4fe7":["record"],"9ff7c57e-d953-40f2-8284-39654a37bfc9":["record"],"a87260fc-9f42-4872-877b-09832fa6d2b0":["record"],"22f8847a-c7bd-461b-979b-73e47ad105bc":["record"],"a2513a4e-3e21-47c0-a968-693815045851":["record"]},"attributes":{}},{"name":"{{static.6816f79cc0a8016401c5a33be04be441}}","label":"System Administrator","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"112a2ab8-d822-457e-8df2-c371482bc637":["approval_conditions"]}},{"name":"112a2ab8-d822-457e-8df2-c371482bc637.approval_state","label":"2 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"04d79bee-4e88-4005-ad1b-a0f8874b8bce":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created_1.current.event","label":"Trigger - Record Created➛Event Registration Record➛Event","reference":"x_2065908_colleg_0_event","reference_display":"Event","type":"reference","base_type":"reference","parent_table_name":"x_2065908_colleg_0_event_registration","column_name":"event","usedInstances":{}},{"name":"Created_1.current.student","label":"Trigger - Record Created➛Event Registration Record➛Student","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"x_2065908_colleg_0_event_registration","column_name":"student","usedInstances":{}},{"name":"Created_1.current.student.email","label":"Trigger - Record Created➛Event Registration Record➛Student➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email","usedInstances":{"a87260fc-9f42-4872-877b-09832fa6d2b0":["ah_to"],"22f8847a-c7bd-461b-979b-73e47ad105bc":["ah_to"],"a2513a4e-3e21-47c0-a968-693815045851":["ah_to"]}}]</label_cache>
+        <master>true</master>
+        <name>Event Registration Approval</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Event Registration Approval">b7c62eabc32ac390c481f6edd40131d1</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 08:41:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6b2adf27c3eec390c481f6edd40131c9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 10:27:18</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=6b2adf27c3eec390c481f6edd40131c9"/>
+    <sys_variable_value action="delete_multiple" query="document_key=6b2adf27c3eec390c481f6edd40131c9"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=6b2adf27c3eec390c481f6edd40131c9"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=6b2adf27c3eec390c481f6edd40131c9^sys_idNOT INe72adf27c3eec390c481f6edd40131cb"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>6b2adf27c3eec390c481f6edd40131c9</id>
+        <name>Event Registration Approval</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 08:41:14</sys_created_on>
+        <sys_id>e72adf27c3eec390c481f6edd40131cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 08:41:14</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=e72adf27c3eec390c481f6edd40131cb"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=6b2adf27c3eec390c481f6edd40131c9^sys_idNOT IN6f2adf27c3eec390c481f6edd40131ee,e72adf27c3eec390c481f6edd40131cd"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Event Registration Approval">6b2adf27c3eec390c481f6edd40131c9</model>
+        <model_id>6b2adf27c3eec390c481f6edd40131c9</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_6b2adf27c3eec390c481f6edd40131c9</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 08:41:15</sys_created_on>
+        <sys_id>6f2adf27c3eec390c481f6edd40131ee</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 10:27:17</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6f2adf27c3eec390c481f6edd40131ee"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="Event Registration Approval">6b2adf27c3eec390c481f6edd40131c9</model>
+        <model_id>6b2adf27c3eec390c481f6edd40131c9</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_6b2adf27c3eec390c481f6edd40131c9</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 08:41:14</sys_created_on>
+        <sys_id>e72adf27c3eec390c481f6edd40131cd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 10:27:17</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e72adf27c3eec390c481f6edd40131cd"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=6b2adf27c3eec390c481f6edd40131c9"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6b2adf27c3eec390c481f6edd40131c9"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=6b2adf27c3eec390c481f6edd40131c9^sys_idNOT INb72a1367c3eec390c481f6edd401311c"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="Event Registration Approval">6b2adf27c3eec390c481f6edd40131c9</flow>
+        <generation_source/>
+        <name>Created</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 08:41:15</sys_created_on>
+        <sys_id>b72a1367c3eec390c481f6edd401311c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 08:41:15</sys_updated_on>
+        <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
+        <trigger_inputs>H4sIAAAAAAAA/9VY227jNhD9FUFPLeACuviat23iRQNsN6jjbR8WqUBJQ1soTboSpcS7yL93qIst6+LYsbJ1ngKRNOfM4ZkzZL5+1xlxgelX+py4DPSeHnAJISdsvlkDDks17HCyUnMrwn0iRbjRr2QYQ0+noVjNYbVmROJiSliEgyL0IdSvzJ6eEBbD/Sa69XEn/H26Tb6nnk/j95NjGcPBxBg7nmAMFo7hQAJcOiEsgkiGRAaC43o/iDDS5s/8Z1O1Rpvtr/GWAfND4PrV14eeviYhhpQKzvfKVKAwedQjEwsMzzZtyzIMa9w33aHtmpZvEzAM3LDKTyUH2UDTjgB4ksB98Lfc1BgMgfh3nG22K5Z4ABlbK/IUBd9w97Gh1lFA7B5kc9tPJyclG/aWIvDgbp2SkY5kOLNJweIV/5zhV3QCJTGTBZ04Eke4H6wVZAUiR0Tvl+JxVgT8GPA0u3ySCY+w7ReRMgzcWEKkCKcBQ+qdjJtIxGGKfja9vpvdOH99mF//Np05s+n9fHZ7PZ/e6M9pXs6/sdoxQ5hjcbJ0nrca+BgAUwcYbSIHT7KnR14YrOUHTwZJocTn3k7d14L7QS6RisK9YiraV3iR/SGJG0aryL1SxELof0//qMs4GzxNt8MhIT6QFt26tKTbcuYN0GQDCeXsDik4HzlGwn3D+J9EnBvVazX8SLiMHCkc4vtOiSUsedxYpSh8YDe7eDgeLBYo+4CvYxm9KOost+cXFRzGHH/gbM+jruOUti1/n9AVUTFYhQU3OWD6Kd9xFnNNcM2Lw1AZKZ6rVuyupaiUFujtiixyZuk9MPBkSQz0S1T++j2IooAvSui3wdORenS2KUMoTPWcoA9dFnGd9KSST6WYT65k06TUBWoZI1XHpmG71DRGxoBQ3zYMzypVch1MK0pZkcSbVPRp9RylYmRHnH6V4hy8Ua6Go7Sb7Au/IEFJJLeN626gmR1BsxS0iv3ZJ/nfVpbZ8M2+Og+l1nHvJ35C8Bd+keMxvf0IB6RMPKKzvsL9qMDbZChi7lddSO2pBfh3b0VHvucS75/DYXcrtJ/yY/v50jxwR3shXMI3HbifTU13An0w0PRs9Dt3MJm4HrEoHQ1HYJkV99vBaMT2LlzvhWNPmnTT5oCNyk2aBH+C950BsOaDJwM83wFzYTb6Xzb3PpzucQncQaihw5SX1QxvwQIfirluq70WOtnV97kVT8cTb2CORt4IXy1Y8bQPLjH71oBMRkN7PKhUfA3KIZiygZkf8pZRr1AFpMUNvmRTl/U4f0vZRiClakend+l0PckClPqlOhItNRQRaopO7Xa3ULsH7H7pa7azri3kstavMfSvOL4XWt3uPgv+SwOcLl9PHK/3x1DTAuXSrhMVkST7rJ/9pIL+eDChdrPF0EmTxezAtMO8+OvFkVJIWkXVdM84tvSSxgpuvRi8opgqMinfGA5caboixeycFOvtSLHPvkYVtdj6jnwN2HfUwtJ7xev7mODgCNro0wHV8n8Rgq+5G00uAclkeFPGUJqK22XnyK68tUaGw1p+Y+muRymaq2nfCA0ntPCHJP42jaoihW5fwOCPyGBgt9yHJ9UXcBOgF/BefNs6WSJJk+IO9q7T9q3u2di9ShW0r4gj+1KnWTc3p/OybmxPL2V9fuM59H5vQHGhLeXhPxLK8c5aHwAA</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=6b2adf27c3eec390c481f6edd40131c9^sys_idNOT IN272a1367c3eec390c481f6edd4013117,632a1367c3eec390c481f6edd4013112,672a1367c3eec390c481f6edd4013118,a32a1367c3eec390c481f6edd4013114,ab2a1367c3eec390c481f6edd4013119,ef2a1367c3eec390c481f6edd4013115"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Approval">6b2adf27c3eec390c481f6edd40131c9</flow>
+        <generation_source/>
+        <order>5</order>
+        <parent_ui_id>04d79bee-4e88-4005-ad1b-a0f8874b8bce</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 08:41:15</sys_created_on>
+        <sys_id>272a1367c3eec390c481f6edd4013117</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 08:41:15</sys_updated_on>
+        <ui_id>22f8847a-c7bd-461b-979b-73e47ad105bc</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2YXW/bNhSG/wqha0WVv+Pcdc6CFkhboAk6DE0hUCRlc6NEjaKSuIH/+w4l6svOXLnxsATLhS90+PUe8n14JH99cDh1zpwxPfWnYTTGM380HPn+6XA+D0fzyD+dzf0BoY7rJDhm0FMxIpV5vsUiN4GHh4ViWDMaDDySK8USvdlAO+VZKvD6i+0GEbLigkK7c/b1m+ukWMGMminn7GGrqa8kgUMmoOs1Vkum0edK2rZUvU7NM5Ukj0FewKvgpZ3g3Lag9+fQAoOMKt912L1mCWUgJ8IiY64T44RiLdW6jkDu9FMimsCKJxqmfJtlknDYlwzpFUMsxlygO65XCKNSmOeY+e4z/h3EjYZmqojBHhCjlSeEU1DktMKB3VJoft80R+dY4yutcqJzVe+05IRl5W5SFuFc6EU7Vnb4lGouk3KIxqGoRkuRx8nHchOdeoLWSeYZiGGp2RuTLCwOiUdXK3n3uRJ7wZNiF+2uCEmwqJ+iK4YVWV1wJsxRJ3kcQl/XwVorHubayARTCOjVrBMUUs1a0JMJVhxljNOUJ8sgVfKWFwuC/NhbCnjwIiHvYHzGl4mHicnVg9PD3gXEz4vwF6y4SfwDTAODN66TrbOFwFnWpA/7H/yVG/XlZnTlmNFBYTgzmCie6rew1C2zyW5ci9hgvs/PdNz4tjVng9l9MPSnk7l/GsDxCLYM/IDdGhmKLXmmFS6Ocge7X00fIKPT5zAQewhvQDQmejwRC+FO7LI9Fn0sGyyCgwMRLI1oCbwG7HR5M5TAIW3l1dSd+l3q/oG250FZzU5vzLo4/TvIgEmyoPS9za1Y/CdQ+hFA/nQahtNwMhs1PpyTiM7CaIpnZNT47g6uXRVj9WdQXLstiga7hNgL5TAmemipmICrWuSUod8qUft0WkhCKeHuS7YJAaVvLordrQkZPqlIldZEWiI4TLGG0lRLMsGmcOkV1ohnKIPT8tC1RNxm1RrhorXMUZxnGrppaOnA16l24+fLnbWDjZ4/6pUXAebxAZzsLwS4MTZeBVruf0f0Mp2bpb3CYJsN2iWz56jDyO2RRF3N5G5GFlAopnBSW3xeVUHL5mg/m2Wx2kGzVZz854vJS6HACBc85oUhSn6PDwbd6ynmd2xESAuMI3wn9Vi8MvRisavkEEOPf67YvDr6xTl6sPfjm007PgqPbekeq1eW/mXL0+HBpp68mvp/YurJfluRjpGyPPyDEd0y9u6nNFrIJOIqZrTPh3en94EvLT9WXgFxVet+LJdDwJi+vr7851wcHwK810rRsHubSrpuEXCT+/6IpMhoPkmxXp1oeZJIyooGeuMM3aE7cEfw82/K3uwdE0K65cg3aRm7SQ6YaVDN9LvMFWr/24Uiqcpv1IK1Fc5QyFiCSMWZ1112F1Iro4fS40k4jPwex1WXwvKwdk7PMr/Ssdgi/t31h8uG99kTC+F0MhlNX4l/ciVM7+iQKpmmNrcjV8NvfwMj/Tn19BkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=272a1367c3eec390c481f6edd4013117"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Approval">6b2adf27c3eec390c481f6edd40131c9</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 08:41:15</sys_created_on>
+        <sys_id>632a1367c3eec390c481f6edd4013112</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 08:41:15</sys_updated_on>
+        <ui_id>a87260fc-9f42-4872-877b-09832fa6d2b0</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Y32/bNhD+Vwg9K6psx3acty5Z0AJpC9RBh6EpBIqiLG6UqJFUHC/w/76jRP2yU9duPCzB8pAHH4/kd3ffdyfm64PDIufcOY3O/EkYn+KpPxqOfP9sOJuFo1nsn01n/oBEjutkOKXgKSkR0vy+w7wwhoeHC0mxplEw8EghJc30eg3rEVM5x6sv1g0sJGE8gnXn/Os318mxhBM1lc75w8bSvpA4DikH1xssF1SjzzW0Tah6lZvfkSBFCvACVhuv7QGXdgW9v4QV2GRQ+a5D7zXNIgpwYswVdZ0UZxHWQq4aC8Qefcp4a0hYpuHIt0oJwiAvCumEIppixtGS6QRhVAHzHHPevWJ/A7jR0BwVU8gBMVhZRlgEiJyOObApheX37XJ8iTWea1kQXcgm04IRqqpsRjTGBdcXXVvl8CnXTGTVFo1DXu8WvEizj1USneaATiULBWBobnJjgoXLIfB4nojl5xrsFcvKLNqscEEwb37Fc4olSa4Y5abUWZGG4Os6WGvJwkIbmEAKDl7tPUEJ1dwFnpTTspQpznOWLYJcijtWXgjwU2/B4YcXc7GE/YotMg8TE6sH1cPeFdgvS/MXLJkJ/AMcA5vXrqNW6oJjpdrwIf/BX4VBXyWjD8fsDkrCmc1Esly/havuqA127VqJDWa7+BydtrztnNnK7D4Y+pPxzD8LoDycLgI/oHcGhqQLprTEZSm3ZPer8QFl9HwOE+IewFshGhI9HogV4ZbtursXfawWrAQHB0qwIqJV4A3ITledoRIc0hZeo7ozv6+676jteais0c7eMuvL6d+RDJBEBRXvbWzl5T8hpR8JyJ9MwnASjqejloczEkfTMJ7gKRm1vFtC25Upln8GZdvtqGiwrRDbUA7TxB5Yak1Aq+ZFRNFvNahdOK1IQiGg92WbCgGkb67K7DYKGT5pSFXURFogKCZfwWhqIBljO7h0gjViCimoloduBGI2qs4OF61EgdJCaXDTsNITX2/anT5f3Vk6WOvlo1x5EcI8vgDHuwcBbomNk0CL3d+IntKFudorCbZeo21l7rnrMOXuEUQzzcR2RFagMEyhUhv6nNdGq83Rbm1Ww2pLmp3h5D9fmbwUFRjgnKWsJESl3+MLI9rJKer3aERIRxhHeCftcXlN6IuLbSSHEPr054bNK6NfHKMHOx/fdNLjUXhsSu9xe03pXzY4HR5M6vErqf8npB7vphXpEUkV4R+U6A6xu49oNC9CQAvfJtt0/67fgR8qP0Zbi2DeYH0M/yFimLx+svznWjg+8fFOKsXDfgcV0arD+tvC90ckRwbzSY51cqLFSSYiWi5Et87Ad4fuwB3Bn39budN3lHPhVlvf5JXtNjvkqEF91O+ikKj7Py6UYIVCSjOkCgLEUHHB4emqaqEhoKt5quIlZhqqYp62UBfMPQRnoSXj3DxJKeQJXAW8caV95AqoPjxbI0qYMhfBISmGCvbj2Ba8jWuP0J9vSIf1pj0I1Qzoik5b/LJdKdEp3+hJ724+XLcdafrE8TwZj0eT15705PmcL6NhJEWe29iOPKO//QOo3uF9ihoAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=632a1367c3eec390c481f6edd4013112"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Approval">6b2adf27c3eec390c481f6edd40131c9</flow>
+        <generation_source/>
+        <order>7</order>
+        <parent_ui_id>7b8c0a6a-ba9a-46b6-ad9f-0e2e6caa26b0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 08:41:15</sys_created_on>
+        <sys_id>672a1367c3eec390c481f6edd4013118</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 08:41:15</sys_updated_on>
+        <ui_id>9ff7c57e-d953-40f2-8284-39654a37bfc9</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXW/aMBT9K8jPKEoIIOBtgiFN6lqJTrx0VeTYF/DkfMx2KAzx33edOCGDrqNSX9B48/1wzjk5hzwdiOBkQvrA/WAcDFkYhGHP93ujfhAPwzjo8ZACBKRLUpoATipgmeJ43lJZ2MLhMFVADfAo8FihFKTmeMQ+FzqXdL90Y1hhGyE59snk6blLcqrwRgOKTA5nrWshSRqDxNFFjekco9nn9swzViSIKxJ18c5tzlyn82WGHVyycAK/S2BnIOWAQFZUauiShKacmkztycSoAgtImj+kct9MbERqKqIJ3WnxC5/c9+3cCpAZcyI0x8gJVJVXM2roI97MTKEavTLBQFeacFjRQpppu1YNPORGZGm1Ymgs6+1MFkl6XylCmgta76PQCAJyy9Mir2itHjfZy6IGORdpKYmjKDNGZXOixigRF8bCORCQUGqc0DwX6TrKVbYV5TJCSby1xIO3ktkLPlOLdepRZnF7qCr15lifleUlVcKS+IrX4PKxS/ReTyXV+kQFNYx+FhZJRcxRiEoVSgmi0gl2mSmRm0/4qC044MeuM308eMthbHwyVOvOk/F3Uc8fDsb+KEKpJawjP4KthaFgLbRRtHwtF0H4bGc6iz9n3heNK4DX0fhWGuJ1Ii4dF7W79m7nvmq4bAw+LBujW8qGo3Hz4fhXJPzem3+6LSeVKdCtOGhDTaG/F74fol1/AMNPwqX7/zL1Pv9fgbL2/1yA5PoV2LX5IUF4BqKKxlkAXLOzdM3mA/FhKQiGfvm7oSz8N9+J59/mxD7lHgkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=672a1367c3eec390c481f6edd4013118"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Approval">6b2adf27c3eec390c481f6edd40131c9</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 08:41:15</sys_created_on>
+        <sys_id>a32a1367c3eec390c481f6edd4013114</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 10:27:17</sys_updated_on>
+        <ui_id>112a2ab8-d822-457e-8df2-c371482bc637</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1YXW/iOBT9KyjPlHXIB6FvVdlKs9qdkWhnXkoVOfYN9cgkTJx0yiL++9zEzkehw8AOldpVXxC+99o+Pj4H29yuLcGtcwtc3/HwYxQ7xB7aJAA/CNiYUBb4vuc6Vt9K6AKwki6XWfpAZZgBVWmCCWwUZQa/cqGWkq6+tBF2LyTPILHOb+/61pJmOEoOmXW+3kodCkPSCCSWXhgcvWmN46cA89WyTKg8E8nctP82w1zXwTTjJaxh34LHHBIOiCemUkHfWtCE0zzNVk0Eh+afEtkG7kWS6wUv6KMS/+J8tk/Kwhhwicyw0TRDw5QOxxOaU0RSsLzIGuJSwUBpcjjEtJD5ZTemCz4tc4GLrLrkNJJ171QWi+SjZsRqBuhsTKEQBCzLlZbQzTri6/v0+7RGeSWSihSTlCmjsmnRHKmLirzEs7YKcbPFso7s8AwSFjhjuMB9wkhYbpaoZkHQi8FcYmMQy/Q7olNingwoK1c4wB2ggyuMT6rwF5qJcrn/4DDYuZzucyK+FfCh1JE/jPwxCfgZj0l05gaOd0YZkDPwbQ887jPPdqxN31IrdSmpUi1RuEPht6JcpqbNEBRqjssuLBPL/AJBPYDhYtM3LiJ2PITxeEgimxCHkMBjJHAgckb+yKE8eEaksQDJOyaqE7tm6mSOM9UBqHZMdWVg/QyusVTVDKuip7aq+vc+6sTJrRUQ8pa8hZP/jrVexjHHq19T8AsLsL1ig85B8jUtsuQZB5zgGDkARK34vzSKbcFvg/svenfe9f7/1/so2Cc1RlpJZcBQGB2hr9eXuPk58NAesCJDmvLN5gTqPwBSrf5pjWkbo9E7T1lR7YXgW4KfmEzvw6RVPNmveK2LQwTvDN/l/irlzrx92orHrZR4gSShuruCn1ka+8w6n1lJmsDM6s+ssiostVWFsQIRNokqtl5vNjpSZNQMYHeabW9OV6qqVOweeCF19EkkrMRv4qfw2wGc1H6bFNCbaFJ2aaqfKTVOzYvYOWuuTUE10h83onvmeCc7c9y3dOL87uvl5R4lYXNtR4fhD8ULvDrcvfqDjtiaazxLEy7KFaiOPfXlH9QUvgLL1UWy+ny7XqscLcYGfmD78WjMGKEBsX2X2MyjjhMBcSNwXXuzudu10glGPM6KB1DRHH3oIPUraowl278UTKeuHds/IkzSWNE91WH4xm5/r9OLp7ddxPZes1irLc1ma7THcEh8b0wCFJuUMA9JCA/lvBnMhcr1mbbrpj/Lmt70ac1x/jgAc+2PGwN6aw3GEVXzuYdQ1W3rIWQfeShpazzrhHcfvBof3P0AgOJY8DwWAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=a32a1367c3eec390c481f6edd4013114"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>c1806bf4a70323008299b39f087901cb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Approval">6b2adf27c3eec390c481f6edd40131c9</flow>
+        <generation_source/>
+        <order>8</order>
+        <parent_ui_id>7b8c0a6a-ba9a-46b6-ad9f-0e2e6caa26b0</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 08:41:15</sys_created_on>
+        <sys_id>ab2a1367c3eec390c481f6edd4013119</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 08:41:15</sys_updated_on>
+        <ui_id>a2513a4e-3e21-47c0-a968-693815045851</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2YXW/bNhSG/wqha0WVv+PcdcmCFkhboAk6DE0hUCJlc6NEjaTiuIH/+w4l6svOXLnxsATLRS50+PUe8n14zHx9cBhxzpwxOfWnYTzGM380HPn+6XA+D0fz2D+dzf1BRBzXSXFCoaekkZDm+w7z3AQeHs4lxZqSYOBFuZQ01ZsNtBOmMo7XX2w3iERLxgm0O2dfv7lOhiXMqKl0zh62mvpK4jikHLreYLmgGn2upG1L1evMfBMR5QnIC1gVvLITXNgW9P4CWmCQUeW7Dr3XNCUU5MSYK+o6CU4J1kKu6wjkTj6lvAksWaphyrdKiYjBviiklxTRBDOOVkwvEUalMM8x890r9h3EjYZmqpjCHkRGK0sjRkCR0woHdkuh+X3THF9gja+1zCOdy3qnBYuoKneT0BjnXJ+3Y2WHT5lmIi2HaBzyarTgeZJ+LDfRqSdonWSuQAzNzN6YZGFxSDy+XorV50rsJUuLXbS7wkWEef0VX1Mso+Ulo9wcdZonIfR1Hay1ZGGujUwwBYdezTpBIdWsBT0pp8VRJjjLWLoIMinuWLEgyE+8BYcPL+ZiBeMVW6QejkyuHpwe9i4hflGEv2DJTOIfYBoYvHEdtVbnHCvVpA/7H/yVG/XlZnTlmNFBYTgzOJIs029hqTtqk924FrHBfJ+fybjxbWvOBrP7YOhPJ3P/NIDj4XQR+AG9MzIkXTClJS6Ocge7X00fIKPT5zAQewhvQDQmejwRC+FO7Ko9Fn0sGyyCgwMRLI1oCbwB7HR5M5TAIW3l1dSd+l3q/oG250FZzU5vzLo4/TvIgElUUPre5lYs/hMo/QggfzoNw2k4mY0aH86jmMzCeIpn0ajx3QquXZlg+WdQXLstiga7hNgL5TAmemipmICrmueEot8qUft0WkhCIeDuS7cJAaVvLovdrQkZPqlIldZEWiA4TL6G0lRLMsGmcOkl1ogppOC0PHQjELNZtUa4aC1ylORKQzcNLR34OtVu/Hy5s3aw0YtHvfIiwDw+gJP9hQA3xsbLQIv9vxE9pXOztFcYbLNBu2T2HHUYuT2SqKuZ2M3IAgrFFE5qi8/rKmjZHO1nsyxWO2i2ipP/fDF5KRQY4ZwlrDBEye/xwSB7PUX9jo2iqAXGEd5JPRavDH1+vqvkEEOPf67YvDr6xTl6sPfxTacdH4XHtnSP1StL/7Ll6fBgU09eTf0/MfVkv62ijpFUHv5BI90y9u5TGj5MH0r6vLvbnQ/8yfJj3RUO17XqxzI5BIvp64+X/5yK4yOA91opHnbvUkHWLf/f5r4/ijJkNJ9kWC9PtDhJBaFFA7l1Ju7QHbgj+PNvy970HeVcuOXIN1kZu00PmGlQzfS7yCVq/68LxUKWL9QCtRVWKBXaPGRh7ynxuovuEmpF9NB5LAGHUd/jqOoiWB7UzslZ3pc64Vu0v7v5cNWwPntiCZxOJqPpK+1ProHZigyJFFlmcztyHfz2N6g2sG7uGQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ab2a1367c3eec390c481f6edd4013119"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>f9d01dd2c31332002841b63b12d3aea1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Event Registration Approval">6b2adf27c3eec390c481f6edd40131c9</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>04d79bee-4e88-4005-ad1b-a0f8874b8bce</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 08:41:15</sys_created_on>
+        <sys_id>ef2a1367c3eec390c481f6edd4013115</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 08:41:15</sys_updated_on>
+        <ui_id>50398678-8033-4bd6-8288-837096bb4fe7</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VVXW/aMBT9K8jPKEoIIOBtgiFN6lqJTrx0VeTYN2DJ+ZjtUBjiv+86cQKFrqNSX9Dydr/sc07uSZ72RHAyIX3gfjAOhiwMwrDn+71RP4iHYRz0eEgBAtIlGU0BOxWwXHGMN1SWNrHfTxVQAzwKPFYqBZk5HLDOhS4k3S1dG2bYWkiOdTJ5eu6Sgio80YAik/1Z6VpIksYgsXXRYDrHaHaFjXnOyhRxRaJJ3rnJmat0vs2wgkMWTuB3CWwNZBwQSEKlhi5JacapydWOTIwqMYGk+UMmd23HWmSmJprSrRa/8ea+b/sSQGbMidCGkROoTiczaugjnsxMqVq9csFA15pwSGgpzfQ0Vzc8FEbkWT1iaCyb6VyWaXZfK0LaA07eR6kRBBSWp0Ve00oe1/nLogE5F1kliaMoc0ZlG1FjlIhLY+HsCUioNE5pUYhsFRUq34hqGKGk3kpi4CUyf8E7tVhlHmUWt4eqUm+O+VmVXlIlLInveAwOH7pE7/RUUq2PVFDD6FdpkdTEHIWoUqGSIKo2wQ4zJQrzBa/agAN+6LqljwfvbRgbHxfq5Mzj4m+jnj8cjP1RhFJLWEV+BBsLQ8FKaKNo9VoujPDV9nQWr3s+Zo0rgDfW+FEtxNtEnDsucnens537uuC8Mfg0b4xuyRuOxs2b41+W8HvvfnRPNqlygT6xgzbUlPpn6fshZ3mWCJUCv1z/v7V9zAFX4GwcMBcguX4DeLP+kCI+A1FN5MwCrthZumL7i/g0HwRDv3puyA3/zZ/i+Q97RfxPIAkAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ef2a1367c3eec390c481f6edd4013115"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=6b2adf27c3eec390c481f6edd40131c9"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=6b2adf27c3eec390c481f6edd40131c9^sys_idNOT IN6b2a1367c3eec390c481f6edd4013103,a32a1367c3eec390c481f6edd4013101"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">2bf813a3c3eec390c481f6edd40131f8</block>
+        <comment/>
+        <connected_to>04d79bee-4e88-4005-ad1b-a0f8874b8bce</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Event Registration Approval">6b2adf27c3eec390c481f6edd40131c9</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>6</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 08:41:15</sys_created_on>
+        <sys_id>6b2a1367c3eec390c481f6edd4013103</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 10:27:18</sys_updated_on>
+        <ui_id>7b8c0a6a-ba9a-46b6-ad9f-0e2e6caa26b0</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">2bf813a3c3eec390c481f6edd40131f3</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Event Registration Approval">6b2adf27c3eec390c481f6edd40131c9</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>3</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 08:41:15</sys_created_on>
+        <sys_id>a32a1367c3eec390c481f6edd4013101</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 10:27:17</sys_updated_on>
+        <ui_id>04d79bee-4e88-4005-ad1b-a0f8874b8bce</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYJnWZAov+Kb4SBAgbQBmiCXNhBWJGUTpUSVpOy4gv+9Sz1so3HQBs2xN3OWu5wZ7cAN0bWramcf9NJauS7J4utTQGTpMfzdkBIKQRaE6ZJLJ3WZtkBAtqBqX1hWldFbwRHi0lYK9o8vK2wjFTein16BwRlOGLJofitJjo15BHl8xWKW0GlCo4jOx3E2TbKY8gQEJDhQQSYUXl0NtD7ctkjwKl+3rzxunZHluj/f9lPuB1Ab7lnFUUDEsxMlR/aLHJQVASmg5OC02R8RI4DfleoEbGTpcBzxl5+t/IkP0snEX8wFSmSiKx6Pae9YB+fX4ACp1MzVpr/KNloyYTtzuMihVm51jnUX7iovtWtxkKmhW6u6KD93jpDjgOEDIVJbJCEqr9RT73Xk9xu9+zKwvJFl60pfVJqBOp7AoXdZ7TyfhgglChyUFlBV6GjqF0C2zcilCNcKD2Gu9A4f9dsWAvPEQzQWwhvEr1v4EYz0Kj7hGGzuaGZgJUvbzcRxaJMgh4DYvV0psPYkEt1Nf9SeYie5F5d2/vgWZmTllvjyVvQ6DsHLRT/b8aaJYwoUsvmIzykdjSczMZrznI5YMovHc5qxaTILoV14UKl14MTh8K2OooTDqwF5r7FvS9cVTPJJHE0up2s8vZSuC7l6Y6ToHyLlv+dfJiqKov+R+udISZt2Qei1tY+/Y6KefHy6N49eM2mR2oPHPg7/ML6wx+WS7BzaafPdizphh19EFZijqwYAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=6b2adf27c3eec390c481f6edd40131c9"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=6b2adf27c3eec390c481f6edd40131c9"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_6b2adf27c3eec390c481f6edd40131c9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 08:41:15</sys_created_on>
+        <sys_id>2f2adf27c3eec390c481f6edd40131f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="College Event Registration Portal" source="x_2065908_colleg_0">078906dfc3264390c481f6edd40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 08:41:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_6b2adf27c3eec390c481f6edd40131c9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 08:41:15</sys_created_on>
+        <sys_id>6b2adf27c3eec390c481f6edd40131de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="College Event Registration Portal" source="x_2065908_colleg_0">078906dfc3264390c481f6edd40131f2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="College Event Registration Portal">078906dfc3264390c481f6edd40131f2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 08:41:15</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_6b2adf27c3eec390c481f6edd40131c9"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_6b2adf27c3eec390c481f6edd40131c9"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>b7c62eabc32ac390c481f6edd40131d1</sys_id>
+        <latest_snapshot>6b2adf27c3eec390c481f6edd40131c9</latest_snapshot>
+        <compiler_build>glide-zurich-07-01-2025__patch10-05-22-2026_06-12-2026_2311.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=b7c62eabc32ac390c481f6edd40131d1^sys_idNOT IN103a1367c3eec390c481f6edd401318c"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"103a1367c3eec390c481f6edd401318c","name":"plan","plan_signature":null}}</plan>
+        <plan_id>b7c62eabc32ac390c481f6edd40131d1</plan_id>
+        <snapshot>19ebbb6bc3e20790c481f6edd40131a2</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-08-13 08:41:17</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>103a1367c3eec390c481f6edd401318c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-08-13 10:27:19</sys_updated_on>
+        <trigger display_value="">ed72bba7c3a20790c481f6edd4013191</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=b7c62eabc32ac390c481f6edd40131d1"/>
+</record_update>

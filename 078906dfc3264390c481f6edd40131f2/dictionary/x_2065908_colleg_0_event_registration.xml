@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="4c04a257c32a4390c481f6edd40131b9" label="Event Registration" max_length="40" name="x_2065908_colleg_0_event_registration" type="collection">
+        <element label="Event" max_length="32" name="event" reference="x_2065908_colleg_0_event" type="reference"/>
+        <element label="Student" max_length="32" name="student" read_only="true" reference="sys_user" type="reference"/>
+        <element choice="3" label="Approval" max_length="40" name="approval" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Requested" sequence="0" value="requested"/>
+                <element inactive_on_update="false" label="Approved" sequence="1" value="approved"/>
+                <element inactive_on_update="false" label="Rejected" sequence="2" value="rejected"/>
+            </choice>
+        </element>
+        <element choice="3" label="Status" max_length="40" name="status" read_only="true" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Pending" sequence="0" value="pending"/>
+                <element inactive_on_update="false" label="Rejected" sequence="2" value="rejected"/>
+                <element inactive_on_update="false" label="Confirmed" sequence="1" value="confirmed"/>
+            </choice>
+        </element>
+        <element label="Registration Date" max_length="40" name="registration_date" read_only="true" type="glide_date_time"/>
+        <element label="Registration Reason / Notes" max_length="40" name="registration_reason_notes" type="string"/>
+        <index name="index">
+            <element name="event"/>
+        </index>
+        <index name="index2">
+            <element name="student"/>
+        </index>
+    </element>
+</database>
